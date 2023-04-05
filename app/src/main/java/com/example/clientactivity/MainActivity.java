@@ -56,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             try {
-//                InetAddress serverAddr =
-//                        InetAddress.getByName(serverIpAddress);
-//                Socket socket = new Socket(serverAddr, 10000); //create client socket
                 DataOutputStream os = new
                         DataOutputStream(socket.getOutputStream());
                 str = smessage.getText().toString();
@@ -70,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 });
                 os.writeBytes(str);
                 os.flush();
-//                os.close();
-//                socket.close();
 
             } catch (Exception e) {
                 System.out.println(e);
